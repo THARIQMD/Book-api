@@ -126,7 +126,7 @@ Methods          GET
 booky.get("/publications",async (req,res) => {
   const getAllPublications = await PublicationModel.find();
   return res.json(getAllPublications);
-});
+})
 
 
 //POST
@@ -257,6 +257,14 @@ const updatedBook = await BookModel.findOneAndUpdate(
   );
 } );
 
+
+
+
+
+
+
+
+
 /*
 Route            /publication/update/book
 Description      Update /add new publication
@@ -356,3 +364,4 @@ booky.delete("/book/delete/author/:isbn/:authorId", (req,res) => {
 
 booky.listen(3000,() => {
   console.log("Server is up and running");
+});
